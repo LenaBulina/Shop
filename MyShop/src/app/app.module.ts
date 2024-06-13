@@ -14,7 +14,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
     MainLayoutComponent,
     MainPageComponent,
     ProductPageComponent,
-    CartPageComponent
+    CartPageComponent,
   ],
   imports: [
     BrowserModule,
