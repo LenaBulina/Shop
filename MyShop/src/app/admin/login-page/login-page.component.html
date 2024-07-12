@@ -1,1 +1,11 @@
-<p>login-page works!</p>
+<form [formGroup]="form">
+    <h2>Login as administrator</h2>
+
+    <div class="Form-control">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email">
+
+        <div>Enter email</div>
+    </div>
+
+</form>
