@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ProductService } from 'src/app/shared/product.service';
 
 @Component({
   selector: 'app-add-page',
@@ -10,7 +12,10 @@ export class AddPageComponent implements OnInit{
   form: FormGroup
   submitted: boolean = false
 
-  constructor() {}
+  constructor(
+    private productServ: ProductService,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -22,7 +27,27 @@ export class AddPageComponent implements OnInit{
     })
   }
   
-  submit() {}
+  submit() {
+    if(this.form.invalid) {
+      return;      
+    }
+
+    this.submitted = true;
+
+    const product = {
+      type: this.form.value.type,
+      title: this.form.value.title,
+      photo: this.form.value.photo,
+      info: this.form.value.info,
+      price: this.form.value.price,
+      date: new Date()
+    }
+
+    this.productServ.create(product).subscribe(res => {
+      this.submitted = false;
+      this.router.navigate(['/']);
+    })
+  }
 
 }
 
