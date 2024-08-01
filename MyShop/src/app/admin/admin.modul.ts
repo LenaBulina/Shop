@@ -10,6 +10,7 @@ import { OrdersPageComponent } from "./orders-page/orders-page.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AuthGuard } from "../shared/auth.guard";
 import { QuillModule } from "ngx-quill";
+import { SearchPipe } from "../shared/search.pipe";
 @NgModule({
     declarations: [
         AdminLayoutComponent,
@@ -17,7 +18,8 @@ import { QuillModule } from "ngx-quill";
         DashboardPageComponent,
         AddPageComponent,
         OrdersPageComponent,
-        EditPageComponent,
+        EditPageComponent,        
+        SearchPipe,
     ],
     imports: [
         QuillModule.forRoot(),
