@@ -1,0 +1,75 @@
+<div class="container" *ngIf="cartProducts.length > 0; else empty">
+    <h2 class="text-center">Your order</h2>
+
+    <table>
+        <body>
+            <tr *ngFor="let product of cartProducts; let i = index">
+                <td>{{product.type}}</td>
+                <td>{{product.title}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="delete(product)">Delete</button>
+                </td>
+                <td>{{product.price}}$</td>
+            </tr>
+        </body>
+    </table>
+    <hr>
+    <b class="right">Total: {{totalPrice}}</b>
+
+    <h2 class="text-center">Delivery</h2>
+    <div class="text-center text-danger" *ngIf="added">{{added}}</div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="Form-control">
+            <label for="name">Name</label>
+            <input id="name" type="name" formControlName="name">
+            <div *ngIf="form.get('name')?.touched && form.get('name')?.invalid" class = "validation">
+                <small *ngIf="form.get('name')?.hasError('required')">Enter your name</small>
+            </div>
+        </div>
+
+        <div class="Form-control">
+            <label for="phone">Phone number</label>
+            <input id="phone" type="tel" formControlName="phone" placeholder="0xx-xxx-xx-xx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+            <div *ngIf="form.get('phone')?.touched && form.get('phone')?.invalid" class = "validation">
+                <small *ngIf="form.get('phone')?.hasError('required')">Enter your phone number</small>
+                <small *ngIf="form.get('phone')?.hasError('pattern')">Use phone format 0xx-xxx-xx-xx</small>
+            </div>
+        </div>
+
+        <div class="Form-control">
+            <label for="phone">Email</label>
+            <input id="email" type="email" formControlName="email">
+            <div *ngIf="form.get('email')?.touched && form.get('email')?.invalid" class = "validation">
+                <small *ngIf="form.get('email')?.hasError('required')">Enter your email</small>
+                <small *ngIf="form.get('email')?.hasError('email')">Enter correct email</small>
+            </div>
+        </div>
+
+        <div class="Form-control">
+            <label for="address">Address</label>
+            <input id="address" type="address" formControlName="address">
+            <div *ngIf="form.get('address')?.touched && form.get('address')?.invalid" class = "validation">
+                <small *ngIf="form.get('address')?.hasError('required')">Enter your address</small>
+            </div>
+        </div>
+    
+        <div class="Form-control">
+            <label for="payment">Payment method</label>
+            <select formControlName="payment">
+                <option value="Cash">Cash</option>
+                <option value="Card">Card</option>
+            </select>
+        </div> 
+
+        <button type="submit" class="btn btn-dark btn-block" [disabled]="form.invalid || submitted">Add</button>
+    
+    </form>
+    
+    
+</div>
+
+
+<ng-template #empty>
+    <h2 class="text-center">Cart is empty, select a product</h2>
+</ng-template>
