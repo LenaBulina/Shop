@@ -26,6 +26,7 @@ Backend реализован с использованием:
 - ASP.NET Core Web API
 - Entity Framework Core
 - NUnit для unit-тестирования
+
 Сервер предоставляет REST API для работы с товарами, заказами и клиентами.
 
 
