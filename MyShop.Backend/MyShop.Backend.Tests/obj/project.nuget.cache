@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b3wze6xBfdN+sev/1Y1aGUexwfLguiVzn2KhRC6J3rMdQCv8EX37mmfJ6/kDWmMJG/PFukrRE7ctNF1Jr1sayQ==",
+  "dgSpecHash": "/oyVBdQkku5JLHYruPai58aLk/GSbINgKd5lsLVavdFc696Pho1CmZhnpAoLGKtG5OSwA0b3kNfC39qRZRsN9g==",
   "success": true,
   "projectFilePath": "D:\\Angular\\Shop\\MyShop.Backend\\MyShop.Backend.Tests\\MyShop.Backend.Tests.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\aries\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.17\\microsoft.entityframeworkcore.5.0.17.nupkg.sha512",
     "C:\\Users\\aries\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.17\\microsoft.entityframeworkcore.abstractions.5.0.17.nupkg.sha512",
     "C:\\Users\\aries\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.17\\microsoft.entityframeworkcore.analyzers.5.0.17.nupkg.sha512",
+    "C:\\Users\\aries\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.17\\microsoft.entityframeworkcore.inmemory.5.0.17.nupkg.sha512",
     "C:\\Users\\aries\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.17\\microsoft.entityframeworkcore.relational.5.0.17.nupkg.sha512",
     "C:\\Users\\aries\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.17\\microsoft.entityframeworkcore.sqlserver.5.0.17.nupkg.sha512",
     "C:\\Users\\aries\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",

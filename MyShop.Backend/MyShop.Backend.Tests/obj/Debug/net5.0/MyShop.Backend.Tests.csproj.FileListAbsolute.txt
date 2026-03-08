@@ -454,3 +454,4 @@ D:\Angular\Shop\MyShop.Backend\MyShop.Backend.Tests\obj\Debug\net5.0\MyShop.Back
 D:\Angular\Shop\MyShop.Backend\MyShop.Backend.Tests\obj\Debug\net5.0\ref\MyShop.Backend.Tests.dll
 D:\Angular\Shop\MyShop.Backend\MyShop.Backend.Tests\obj\Debug\net5.0\MyShop.Backend.Tests.pdb
 D:\Angular\Shop\MyShop.Backend\MyShop.Backend.Tests\obj\Debug\net5.0\MyShop.Backend.Tests.genruntimeconfig.cache
+D:\Angular\Shop\MyShop.Backend\MyShop.Backend.Tests\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
