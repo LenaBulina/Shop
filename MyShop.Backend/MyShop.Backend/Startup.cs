@@ -24,7 +24,7 @@ namespace MyShop.Backend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddRazorPages();
+           
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAngularApp",
@@ -32,7 +32,8 @@ namespace MyShop.Backend
                     {
                         builder.WithOrigins("http://localhost:4200")
                                .AllowAnyHeader()
-                               .AllowAnyMethod();
+                               .AllowAnyMethod()
+                               .AllowCredentials();
                     });
             });
 
@@ -61,7 +62,7 @@ namespace MyShop.Backend
             }
 
             //app.UseHttpsRedirection();
-            app.UseStaticFiles();
+           // app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -74,10 +75,7 @@ namespace MyShop.Backend
                 endpoints.MapControllers();
             });
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapRazorPages();
-            //});
+           
         }
     }
 }

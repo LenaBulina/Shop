@@ -19,10 +19,13 @@ namespace MyShop.Backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> Get()
         {
-           return await _context.Orders
+            var orders = await _context.Orders
                                 .Include(or => or.Products)
                                 .Include(or => or.Customer)
+                                .AsSplitQuery()     
                                 .ToListAsync();
+
+            return orders;
         }
 
         [HttpDelete("{id}")]
@@ -76,9 +79,9 @@ namespace MyShop.Backend.Controllers
             _context.Orders.Add(newOrder);
             _context.SaveChanges();
 
-            var productIds = order.Products.Select(o => o.Id).ToArray();
+            var productIds = order.Products.Select(o => o.Id).ToList();
       
-            var productsToLink = _context.Products
+            var productsToLink = _context.Products               
                 .Where(p => productIds.Contains(p.Id))
                 .ToList();
 
