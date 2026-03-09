@@ -99,8 +99,10 @@ dotnet test
 Учебный проект для практики Full-Stack разработки.
 
 ## TO DO
+* пофиксить баг при создании ордера (Microsoft.EntityFrameworkCore.Query[10100] An exception occurred while iterating over the results of a query for context type 'MyShop.Backend.ApplicationContext'. Microsoft.Data.SqlClient.SqlException (0x80131904): Incorrect syntax near the keyword 'WITH'. Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.) Появился после обновления VS, .Net
 * написать юнит тесты для фронтенд части
-* обновить пакеты
+* дописать юнит тесты на бэкэнде
+* обновить пакеты на фронтерде
 * обновить верстку и стили
 
 
